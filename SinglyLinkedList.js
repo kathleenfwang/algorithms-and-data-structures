@@ -139,7 +139,6 @@ class Singly {
         return this; 
     }
 }
-let doubly1 = new Doubly(); 
 
 let singly1 = new Singly() 
  
