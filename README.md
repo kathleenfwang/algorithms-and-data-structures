@@ -4,7 +4,7 @@
 - Queue, Stacks
 - Singly Linked List 
 - Doubly Linked List
-- Binary Search Trees
+- Binary Search Tree and Breath First Search 
 
 ### Algorithms: 
 - Spiral Matrix Algorithm
