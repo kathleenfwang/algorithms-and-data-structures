@@ -1,3 +1,5 @@
 # Javascript Data Structures
 
-## Queue, Stacks, Singly Linked List 
+- Queue, Stacks
+
+- Singly Linked List 
