@@ -8,5 +8,5 @@
 
 ### Algorithms: 
 - Spiral Matrix Algorithm
--Sliding Window Algorithms
+- Sliding Window Algorithms
 
