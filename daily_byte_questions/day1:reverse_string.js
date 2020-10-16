@@ -20,6 +20,7 @@ function reverseOriginalString(str) {
     }
     return str
 }
+
 console.log(reverseStrings('The Daily Byte'))
 
 
