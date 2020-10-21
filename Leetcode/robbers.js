@@ -17,7 +17,7 @@ function maxRobbery(nums) {
         dp[i] = Math.max(dp[i-1], nums[i] + dp[i-2])
     }
    return dp[nums.length-1]
-}
+} 
 let nums1 = [1,2,3,1]
 let nums2 = [2,7,9,3,1]
 let allNums = []
