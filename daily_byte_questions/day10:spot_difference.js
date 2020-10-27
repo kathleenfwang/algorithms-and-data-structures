@@ -2,8 +2,6 @@
 // s = "ide", t = "idea", return 'a'
 // s = "coding", t "ingcod", return ''
 
-// i hate doing these problems where i have two strings, have to turn them both into objects, then compare the strings over the string with the biggst length -- lot of repeated code. I could just put them into functions as well.
-
 function spot_difference(s1,s2) {
     let obj1 = {}, obj2 = {}
     for (let i =0;i<s1.length;i++) {
