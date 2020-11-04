@@ -13,7 +13,7 @@ function firstUnique(str) {
     }
     return 0 
 }
-// run time is 2n -> n, two seperate loops over string length, and both have constant lookup of key-matching in dictionary 
+// run time is 2n -> O(n), two seperate loops over string length, and both have constant lookup of key-matching in dictionary 
 let strs = ["abcabd","thedailybyte","developer"]
 
 strs.forEach((x) => console.log(firstUnique(x)))
