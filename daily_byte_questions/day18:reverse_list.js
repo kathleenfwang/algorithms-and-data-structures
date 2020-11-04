@@ -40,13 +40,14 @@ l1.add(3)
  
 function reverseList(list) {
     let previous = null 
-    let head = list.head 
-    while (head) {
-        // once we get to null, we want head to be the last value 
-        let next = head.next 
-        head.next = previous 
-        previous = head 
-        head = next
+    let current = list.head 
+    let next = null 
+    while (current){
+        // we want previous to eventually get to current at the end
+        next = current.next  
+        current.next = previous  
+        previous = current
+        current = next 
     }
     return previous
 }
