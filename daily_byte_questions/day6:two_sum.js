@@ -3,7 +3,7 @@
 // [4, 2, 6, 5, 2], k = 4, return true (2 + 2)
 
 function twoSum(nums,sum) {
-    // two loops ? 
+    // two loops  
     for (let i = 0;i<nums.length;i++) {
         for (let j = i+1;j<nums.length;j++){
             if (nums[i] + nums[j] === sum) return true
@@ -14,6 +14,8 @@ function twoSum(nums,sum) {
 
 function optimalTwoSum(nums,sum) {
     let obj = {} 
+    //see if the sum - current value is in the object, if so return true 
+    // otherwise store curruent number into an object 
     for (let i = 0;i<nums.length;i++) {
         if (obj[sum-nums[i]]) return true 
         obj[nums[i]] = 1 
