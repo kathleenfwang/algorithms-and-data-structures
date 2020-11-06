@@ -6,6 +6,7 @@ function validateCharacters(str) {
     // if its closed, we compare with first value of stack (shift) 
     // if not equal RETURN FALSE  
     if (str.length === 1) return false
+    // only need one dictionary becaus there is only one conditional we are checking: if the value is open parenthesis (if not then that means it is closed)
     let dict = {"(": ")", "[": "]", "{":"}"}
     let stack = [] // add by unshift, remove by shift 
     for (let i = 0;i<str.length;i++) {
@@ -27,7 +28,8 @@ function validateCharacters(str) {
 let strs = ["(){}[]","(({[]}))","{(})"]
 strs.forEach((x) => console.log(validateCharacters(x)))
 
-// OLD CODE; 
+// OLD CODE:
+// I basically had two objects, one for open and one for closed paranthesis, and I compared the indexes to see if they were equal.
 // if (str.length === 1) return false
 // let paran = "(", bracket = "[", squiggle = "{"
 // let open = {[paran]:1,[bracket]:2, [squiggle]:3}
