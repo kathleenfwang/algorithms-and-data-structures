@@ -8,7 +8,7 @@ class Node {
 class Stack {
     constructor(...items) {
         this.reverse = false;
-        this.stack = items;
+        this.stack = [...items];
     }
 
     push(...items) {

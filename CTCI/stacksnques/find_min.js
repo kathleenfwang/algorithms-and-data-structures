@@ -9,18 +9,17 @@ class Stack {
         // add item to the end 
         this.items.push(item)
         // check if new item is smaller than min 
-        if ( item < this.findMin()) {
+        if (!this.findMin() || item < this.findMin()) {
             this.minStack.push(item)
         }
     }
     pop() {
         // remove last item 
-        let item = this.items.pop()
-        if (item === findMin()) this.minStack.pop() 
-      
+        this.items.pop()
+        this.minStack.pop() 
     }
     findMin() { 
-         if (this.minStack.length === 0) return Infinity 
+         if (this.minStack.length === 0) return null 
          return this.minStack[this.minStack.length - 1]
     }
 }
