@@ -8,7 +8,7 @@ function validateCharacters(str) {
     if (str.length === 1) return false
     // only need one dictionary becaus there is only one conditional we are checking: if the value is open parenthesis (if not then that means it is closed)
     let dict = {"(": ")", "[": "]", "{":"}"}
-    let stack = [] // add by unshift, remove by shift 
+    let stack = [] // add by unshift, remove by shift, or push/pop
     for (let i = 0;i<str.length;i++) {
         // if its open, add to stack
        if (open[str[i]]) {
