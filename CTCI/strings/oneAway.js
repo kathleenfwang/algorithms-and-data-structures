@@ -39,6 +39,7 @@ function removeOne(bigger,smaller) {
     return result === 1 || result === 0
 }
 let strings =[
+    ["kale","ale"],
     ["pale","pales"], // true 
     ["ale","abe"], // true 
     ["ales","ale"], // true
