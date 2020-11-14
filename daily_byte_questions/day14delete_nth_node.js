@@ -13,7 +13,7 @@ function deleteNthNode(list,n) {
     let current = list.head 
     while (fast) {
         fast = fast.next 
-        current = current.next.next
+        current = current.next
     }
     current.next = null 
 }
