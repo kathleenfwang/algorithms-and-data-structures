@@ -92,4 +92,36 @@ weave1(queue1,queue2)
 let stack3 = new Stack('hi','kat','is','here')
 let stack4 = new Stack('i','love','studying','cs')
 
+// implement stack with a que 
+class StackQue {
+    constructor() {
+        this.items = []
+        this.que = [] 
+    }
+    push(item) {
+        this.items.push(item)
+    }
+    pop(item) {
+        // shift all items until you get teh last one adn then unshift that 
+        // then add all items back to original 
+        // [12345] -> [1234]
+        while (this.items.length > 1) {
+            let popped = this.items.shift() 
+            this.que.push(popped) 
+        }
+        this.items.shift() 
+        while (this.que.length > 0) {
+            let popped = this.que.shift() 
+            this.items.push(popped)
+        }
+         
+    }
+}
+let s = new StackQue 
+s.push(1)
+s.push(2)
+s.push(3)
+s.push(4)
+s.pop()
+console.log(s.items)
 
