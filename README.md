@@ -1,4 +1,4 @@
-# Javascript Data Structures
+# Javascript/Python Data Structures
 ## Table of Contents: 
 ### Data Structures: 
 - Queue, Stacks
