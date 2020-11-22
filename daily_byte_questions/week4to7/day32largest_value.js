@@ -23,6 +23,7 @@ function largestValue(t) {
     while (que.length > 0 ) {
         // want to initialize new max each level 
         let max = -Infinity 
+        // if you set a temporary array to equal que, it will still change if que changes because the arrays are references to each other, thats why we set a temporary variable to be que.length instead. that will not change even if the original que.length changes. 
         let queLen = que.length 
         for (let i =0;i<queLen;i++) {
             let current = que.shift() 
