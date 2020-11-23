@@ -23,7 +23,25 @@ function visibleValues(t) {
     let result = [root.data]
     let que = [root] 
     while (que.length > 0) {
-
+        let queLength = que.length 
+        let added = false 
+        for (let i =0;i<queLength;i++) {
+            let current = que.shift()
+            if (current.left) {
+                if (!added) {
+                    result.push(current.left.data)
+                    added = true 
+                }
+                que.push(current.left) 
+            }
+            if (current.right) {
+                if (!added) {
+                    result.push(current.right.data)
+                    added = true 
+                }
+                que.push(current.right)
+            }
+        }
     }
     return result 
 }
