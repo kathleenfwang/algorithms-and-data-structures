@@ -51,11 +51,8 @@ class Node {
 }
 
 let l = new List()
-let node = new Node(1)
-l.head = node 
-l.add(2)
-l.add(3)
-l.add(4)
-l.add(5)
+for (let i =1;i<=5;i++) {
+    l.add(i)
+}
 
 console.log(rotateList(l,3).print()) // 3-4-5-1-2-null
