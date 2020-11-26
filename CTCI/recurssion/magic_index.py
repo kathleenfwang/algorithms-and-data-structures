@@ -26,5 +26,5 @@ def magic_index_helper(arr,start,end):
     else:
         return magic_index_helper(arr,mid+1,len(arr))
         
-arr = [0,3,4,5,6]
+arr = [-4,-3,-2,1,1,5,8]
 print(magic_index(arr))
