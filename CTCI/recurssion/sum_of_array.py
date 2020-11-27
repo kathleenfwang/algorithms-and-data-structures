@@ -5,7 +5,7 @@ def sum(arr):
     result = 0 
     for num in arr:
         result += num 
-# in recurssion, you get to the beginning of the array while saving all of the previous values
+# in recurssion, you start at beginning of array and keep adding until you get to the length as the base case
 arr = [1,2,3,4,5]
 def recurrsion_sum(arr,ind):
     if (ind == len(arr)):
