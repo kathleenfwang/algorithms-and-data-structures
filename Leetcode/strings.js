@@ -1,4 +1,4 @@
-// Given a set of strings and a query sub-string, find all strings that have word(s) start with the sub-string  
+ 
 let strings = ['hat','hail','apple','aha','tac'] 
 let sub = 'ha' // return 2 
 
