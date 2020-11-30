@@ -25,5 +25,7 @@ def rotate_list(list,k):
 l = list.Linked_List()
 for i in range(1,6):
     l.add(i)
+l.remove(2)
+l.print_list()
 def run():
-    rotate_list(l,2).print() # 4 5 1 2 3 
+    rotate_list(l,2).print_list() # 4 5 1 2 3 
