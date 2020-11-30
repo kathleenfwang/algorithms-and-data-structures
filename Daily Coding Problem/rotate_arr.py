@@ -1,16 +1,12 @@
 
 def rotateArr(arr,d):
     #Your code here
-    # first swap the first and the last rotate
-    i=0
-    while i < len(arr):
-        # swap up to n 
-        for j in range(i,d):
-            temp = arr[j]
-            # last in i-d
-            swap = arr[d+i] 
-            arr[j] = swap 
-            arr[d+i] = temp 
-        i = j + 1
+    # rotate array by 1 each time for d 
+    # two loops total 
+    for a in range(0,d): 
+        temp = arr[0] 
+        for i in range(1,len(arr)):
+            arr[i-1] = arr[i] 
+        arr[len(arr)-1] = temp 
     return arr
-print(rotateArr([1,2,3,4,5,6,7,8,9,10],9))
+print(rotateArr([1,2,3,4,5],2))
