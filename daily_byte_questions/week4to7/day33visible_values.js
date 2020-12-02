@@ -67,6 +67,7 @@ t.root = node1
 node1.left = node2 
 node1.right = new Node(5) 
 node1.right.right = new Node(8)
+node1.right.right.left = new Node(9)
 node2.left = new Node(4)
 node2.right = new Node(7)
 // tree: 
