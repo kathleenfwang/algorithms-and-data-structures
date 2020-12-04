@@ -31,7 +31,15 @@ def depth_tree(t):
                     depth +=1 
                 que.append(current.right)
     return depth
-
+    
+def recursive_depth_tree(t):
+    if (not t.root):
+        return 0
+    def helper_depth(root,count):
+        if (not root):
+            return count
+        return max(helper_depth(root.left,count+1),(helper_depth(root.right,count+1)) )
+    return helper_depth(t.root,0)
 t = tree.Tree()
 n1 = tree.Node(1)
 t.root = n1 
@@ -41,4 +49,5 @@ n1.left.left = tree.Node(4)
 n1.right.left = tree.Node(5)
 n1.right.left.left = tree.Node(6)
 print(depth_tree(t))
+print(recursive_depth_tree(t))
      

@@ -45,6 +45,7 @@ function visibleValues(t) {
     }
     return result 
 }
+ 
 class Node {
     constructor(data) {
         this.data = data
