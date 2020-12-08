@@ -3,6 +3,7 @@
 # return array as a string 
 def reverse(str):
     arr = [] 
+    # no split individ characters into a list with split in python
     for i in str: 
         arr.append(i)
     mid = len(arr)//2 
