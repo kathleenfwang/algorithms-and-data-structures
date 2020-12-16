@@ -32,7 +32,7 @@ def mergeArrays(a,b,n,m):
     return result
 
     # another approach:
-    def mergeArrays(a,b,n,m):
+def mergeArrays(a,b,n,m):
     '''
     :param a: given sorted array a
     :param n: size of sorted array a
