@@ -5,7 +5,7 @@ def sum_of_two_nums(arr1,arr2,value):
     for j in arr2: 
         if j in dic: 
             return True
-    return false 
+    return False 
 arr1 = [1,2,3]
 arr2 = [40,41,42]
 value = 42
