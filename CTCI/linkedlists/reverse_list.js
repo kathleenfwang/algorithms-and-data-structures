@@ -6,7 +6,7 @@ function reverseList(list) {
         let n = new Node(current.value) 
         n.next = head // point back to previous value 
         head = n // want new head to be at current value 
-        current = current.next // this does not get pointed anywhere new
+        current = current.next // this is to update current (has no relation to the other pointers)
     }
  
     return head 
