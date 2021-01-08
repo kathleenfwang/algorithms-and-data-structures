@@ -14,7 +14,6 @@ def print_list(nodeList):
         nodeList = nodeList.next
 def merge_sorted_lists(l1,l2):
     dummy = result = ListNode()
- 
     if (not l1  and not l2):
         return None 
     while (l1 and l2):
