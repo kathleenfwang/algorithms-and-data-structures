@@ -4,38 +4,39 @@
 # continue until you reach the end of one linked list 
 # then add the remaining elements from the other linked list into result 
 
-import list
-
-def merge_sorted_lists(l1,l2): 
-    node1 = l1.root
-    node2 = l2.root
-    if (not node1 and not node2):
-        return null 
-    result = list.Linked_List()
-    while (node1 and node2): 
-        if (node1.data < node2.data):
-            result.add(node1.data)
-            node1 = node1.next 
-        else:
-            result.add(node2.data)
-            node2 = node2.next 
-    # add remaining lists onto result 
-    if (node1):
-        while (node1):
-            result.add(node1.data)
-            node1 = node1.next
-    else:
-        while (node2):
-            result.add(node2.data)
-            node2 = node2.next
-    return result 
-l1 = list.Linked_List()
-l2 = list.Linked_List()
-
-for i in range(0,5,2): # 0,2,4
-    l1.add(i)
-for i in range(1,6,2): # 1,3,5
-    l2.add(i)
-result = merge_sorted_lists(l1,l2)
-result.print_list()
+class ListNode:
+    def __init__(self, val = 0, next = None):
+        self.val = val 
+        self.next = next 
+def print_list(nodeList):
+    while (nodeList):
+        print(nodeList.val)
+        nodeList = nodeList.next
+def merge_sorted_lists(l1,l2):
+    dummy = result = ListNode()
  
+    if (not l1  and not l2):
+        return None 
+    while (l1 and l2):
+        if l1.val < l2.val:
+            result.next = ListNode(l1.val)
+            l1 = l1.next
+        else:
+            result.next = ListNode(l2.val)
+            l2 = l2.next
+        result = result.next
+    print_list(result)
+    print("**************")
+    if (l1): result.next = l1
+    else: result.next = l2
+    return dummy.next
+n1 = ListNode(1)
+n2 = ListNode(2)
+n1.next = n2 
+
+n3 = ListNode(3)
+n4 = ListNode(4)
+n3.next = n4 
+
+result = (merge_sorted_lists(n1,n3))
+print_list(result)
