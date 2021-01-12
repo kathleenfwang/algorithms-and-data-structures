@@ -37,6 +37,4 @@ for i in range(1,6,2): # 1,3,5
     l1.add(i)
 for i in range(2,7,2): # 2,4,6
     l2.add(i)
-
-def run():
-    merge_sorted_lists(l1,l2).print()
+ 
