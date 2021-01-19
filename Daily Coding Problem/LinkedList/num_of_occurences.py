@@ -1,7 +1,4 @@
-"""  Return the no. of times search_for value is there in a linked list.
-  The input list will have at least one element
-  Node is defined as
-
+"""   
 class Node:
     def __init__(self, data):
 		self.data = data

@@ -1,0 +1,29 @@
+import Node 
+def deleteMid(head):
+    '''
+    head:  head of given linkedList
+    return: head of resultant llist
+    '''
+    #code here
+    # find length of list 
+    # the middle index will be length // 2 
+    # loop through list until next is middle index 
+    # current next = next next 
+    if not head or not head.next:
+        return None 
+    list_len = 0 
+    current = temp = head 
+    while temp:
+        list_len +=1 
+        temp = temp.next 
+    middle_index = list_len // 2 
+    count = 0 
+ 
+    while current: 
+        if count + 1 == middle_index: 
+            current.next = current.next.next 
+            return head
+        current = current.next
+        count+=1 
+ 
+deleteMid(Node.n).print()
