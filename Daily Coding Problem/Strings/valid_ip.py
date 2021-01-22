@@ -5,10 +5,11 @@ def isValid(s):
     # element have to be between 0 to 255 
     # element with leading 0s (007,00..) is invalid
     arr = s.split(".") # [221,111...] 
+    if len(arr) != 4:
+        return False
     for i in arr: 
         try:
             if str(int(i)) != i:
-                print('hi') 
                 return 0
             if int(i) < 0 or int(i) > 255:
                 return 0
