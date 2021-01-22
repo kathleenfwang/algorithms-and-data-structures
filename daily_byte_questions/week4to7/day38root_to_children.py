@@ -22,7 +22,6 @@ def root_to_children(t):
     if (not real_root):
         return None 
     result = [] 
- 
     def helper(root,new_row):
         new_row.append(root.data)
         if (root.left):

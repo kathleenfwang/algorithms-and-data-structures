@@ -13,9 +13,7 @@ function directionReduction(directions) {
                 stack_result.pop() 
                 // now move i back to check if the current
             }
-            else {
-                stack_result.push(directions[i])
-            }
+            else {stack_result.push(directions[i]) }
         }
         return stack_result
     } 
