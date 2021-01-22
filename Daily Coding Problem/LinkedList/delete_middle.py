@@ -12,6 +12,8 @@ def deleteMid(head):
     if not head or not head.next:
         return None 
     list_len = 0 
+    # we need to set two pointers to head because the first pointer is to traverse through and find the length 
+    # second is to modify the list, but the original head needs to not be changed because we are returning it 
     current = temp = head 
     while temp:
         list_len +=1 
