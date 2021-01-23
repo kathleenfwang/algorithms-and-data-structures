@@ -1,18 +1,15 @@
-def countLeaves(root):
-    # Code here
-    head = root
+def count_leaves(root):
+    if not root:
+        return 0 
     count = 0 
-    if not head:
-        return 0
+    head = root 
     que = [head]
     while len(que):
-        # goal is toget to end of tree 
-        current = que.pop(0) 
+        current = que.pop(0)
         if current.left:
             que.append(current.left)
         if current.right:
             que.append(current.right)
         if not current.left and not current.right:
-            # we are counting the number of childless nodes 
-            count+=1
-    return count
+            count+=1 
+    return count 
