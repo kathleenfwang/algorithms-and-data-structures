@@ -3,6 +3,8 @@ arr2 = [3,6,7,20,30]
 result = [3,6,7]
 # we use two pointers to move through searching or matching algos
 # use two pointers to loop through until one array fnishes
+# this is similar to merging two sorted lists into one array
+# having two pointers to advance only when certain conditions are met (in this case, when the nums are equal or one is smaller than the other)
 def repeating_nums(arr1,arr2):
     result = [] 
     i = 0
