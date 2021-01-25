@@ -10,3 +10,13 @@ def rotateArr(arr,d):
         arr[len(arr)-1] = temp 
     return arr
 print(rotateArr([1,2,3,4,5],2))
+
+def rotateArr2(arr,d):
+    temp = [] 
+    for i in range(0,d):
+        temp.append(arr[i])
+         
+    arr = arr + temp 
+    return arr 
+arr = [1,2,3,4,5]
+print(rotateArr2(arr,2))
