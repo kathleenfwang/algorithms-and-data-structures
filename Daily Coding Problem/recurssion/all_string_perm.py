@@ -3,11 +3,14 @@ def all_string_perm(str,step):
         print("".join(str))
         return 
     for i in range(step,len(str)):
-        str[i],str[step] = str[step],str[i] 
-        all_string_perm(str,step+1)
+        str_copy = list(str) 
+        str_copy[i],str_copy[step] = str_copy[step],str_copy[i] 
+        all_string_perm(str_copy,step+1)
 
 
 # For example, string ABC has 6 permutations. i.e. ABC, ACB, BAC, BCA, CBA, CAB
 # so the other variations have to be different than first 
+# we are keeping track of a "step" that will move forward by one 
+# each time we swap the step and the current index 
 str = "ABC"
-all_string_perm(list(str), 0)
+all_string_perm(str, 0)
