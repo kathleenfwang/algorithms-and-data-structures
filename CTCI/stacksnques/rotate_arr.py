@@ -6,8 +6,7 @@ def rotate_arr(arr,k):
     # once we shift the arr, we can append this temp back to original
     for i in range(len(arr)-k):
         arr[i] = arr[i+k]
-    # now the array: [3 4 5 3 4] 
-    print(arr)
+ 
     for i in temp: 
         arr[len(arr) - 1 - k + i ] = i 
     return arr 

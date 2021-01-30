@@ -28,7 +28,6 @@ function maxLenUnique(arr) {
                 if (str.indexOf(str[i]) !== i ) {
                         console.log('yes')
                     len-- }
-            
         }
         return len 
     }

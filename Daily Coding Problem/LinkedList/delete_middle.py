@@ -27,5 +27,10 @@ def deleteMid(head):
             return head
         current = current.next
         count+=1 
+def delete_mid_pointers(head): 
+    slow = head
+    fast = head 
+    # fast = head.next.next 
+    # once fast.next = null, we at the end,
  
 deleteMid(Node.n).print()

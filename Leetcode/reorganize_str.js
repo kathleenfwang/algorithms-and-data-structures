@@ -24,10 +24,8 @@ function reorganizeStr(str) {
             if (obj[sorted[i]] === 0) sorted = sorted.filter((x) => x !== sorted[i])
             result += sorted[i] 
             obj[sorted[i]]-- 
-           
         }
     }
    return obj[sorted[0]] >= 1 ? "" : result 
-    
 }
 console.log(reorganizeStr('aaba'))

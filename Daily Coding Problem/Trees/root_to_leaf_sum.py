@@ -12,7 +12,7 @@ def hasPathSum(node, S):
     '''
     # code here
     if not node:
-        return s == 0
+        return S == 0
     ans = False 
     subSum = S - node.data # want to check if subSum == node.left or node.right
     if subSum == 0 and not node.left and not node.right:

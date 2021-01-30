@@ -10,14 +10,10 @@ class Stack:
         if self.que1.empty():
             self.que1.put(x)
         else:
-            while not self.que1.empty():
-                self.que2.put(self.que1.get())
+            self.que2.put(self.que1.get())
             self.que1.put(x) 
     def pop(self):
-        if self.que1.empty():
-            return 
-        else:
-            self.que1.get()
+        self.que1.get()
     def size(self):
         print(self.que1.qsize() + self.que2.qsize())
     def get_top(self):
