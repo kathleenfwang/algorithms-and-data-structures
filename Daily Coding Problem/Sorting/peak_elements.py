@@ -3,7 +3,6 @@
 def peakElement(arr, n):
     # Code here
     for i in range(1,n): 
-        
         if (i+1 < n): 
             if (arr[i] > arr[i-1]) and (arr[i] > arr[i+1]):
                 return i
