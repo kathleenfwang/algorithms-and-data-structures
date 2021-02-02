@@ -6,6 +6,7 @@ def all_binary_nums(nums,index,count):
         for char in "01":
             nums[index] = char 
             all_binary_nums(nums,index+1,count)
+            # back track and replace changes back to original "?"
             nums[index] = "?"
     else: 
         all_binary_nums(nums,index+1,count)
