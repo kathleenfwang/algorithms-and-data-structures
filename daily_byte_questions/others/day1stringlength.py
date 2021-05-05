@@ -52,3 +52,38 @@ print(reverseWords(s)) # "Byte Daily The"
 # 6 = 3 * 2 (we exclude 1)
 # 3 = 3 * 1 (we exclude 2)
 # 2 = 2 * 1 (we exclude 3)
+
+def productNums(arr): 
+    products = [] 
+    for i in range(len(nums)): 
+        product = 1 
+        for j in range(len(nums)): 
+            if j != i: 
+                product *= nums[j]
+        products.append(product)
+
+    return products 
+
+
+nums = [1, 2, 3,3]
+nums = [0,6,2,1]
+print(productNums(nums)) # [6,3,2,2]
+
+def canSumTab(arr,sum): 
+    dp = [False] * (len(arr) +1) 
+    dp[0] = True 
+    for i in range(1,len(arr) +1): 
+        if dp[i-1] == True: 
+            for num in arr: 
+                if num == sum:
+                    return True 
+                if num + i > sum: 
+                    break 
+                if num < sum: 
+                    dp[i-1+num] = True 
+
+    return dp[len(arr)] 
+
+arr = [7,3,1]
+sum = 8 
+print(canSumTab(arr,sum))
